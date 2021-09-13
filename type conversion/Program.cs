@@ -62,6 +62,21 @@ namespace type_conversion
             {
                 Console.WriteLine("Couldn't be converted to a Boolean");
             }
+
+            var a = 10;
+            var b = 3;
+            var c = 2;
+
+            Console.WriteLine(a + b);//will be 13
+            Console.WriteLine(a / b );//will be 3 (will not show as a float
+            Console.WriteLine((float)a / (float)b);//(will show 3.333333333)
+            Console.WriteLine(a + b * c);//will be 16
+            Console.WriteLine((a + b) * c);//will be 26
+
+            Console.WriteLine(a > b);//boolean value- true
+            Console.WriteLine(a == b);//will be false, because they are not equal
+            Console.WriteLine(a > b && a > c);//will be true, because both are true
+            Console.WriteLine(b > a || b > c);//will be true, because one is true
         }
     }
 }
