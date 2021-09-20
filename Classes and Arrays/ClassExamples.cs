@@ -12,6 +12,18 @@ namespace Classes_and_Arrays
         public string Name { get; set; }
         public bool HasNuts { get; set; }
         public double GramsOfFlour { get; set; }
+
+        public Cookie() //Constructor has to have the same name as the class
+        {
+
+        }
+
+        public Cookie(string name, bool hasNuts, double gramsOfFlour)
+        {
+            Name = name;
+            HasNuts = hasNuts;
+            GramsOfFlour = gramsOfFlour;
+        }
     }
 
     public enum VehicleType { Car, Truck, Van, Motorcyle}
@@ -24,6 +36,16 @@ namespace Classes_and_Arrays
         public bool IsHybrid { get; set; }
 
         public VehicleType TypeOfVehicle { get; set; }
+
+        public Vehicle() { } //overloading- two constructors
+
+        public Vehicle (string make, string model, double mileage, bool isHybrid)
+        {
+            Make = make;
+            Model = model;
+            Mileage = mileage;
+            IsHybrid = isHybrid;
+        }
     }
 
     public class Order

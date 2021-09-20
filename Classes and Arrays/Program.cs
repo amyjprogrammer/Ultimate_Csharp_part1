@@ -35,12 +35,21 @@ namespace Classes_and_Arrays
 
             var secondCookie = new Cookie();
             secondCookie.GramsOfFlour = 1.3;
+
+            Cookie peanutButter = new Cookie("Peanut Butter", true, 3.4);
         }
 
         public void VehicleTests()
         {
             var car = new Vehicle();
             car.TypeOfVehicle = VehicleType.Car;
+
+            Vehicle newCar = new Vehicle //initializing with curly braces
+            {
+                TypeOfVehicle = VehicleType.Motorcyle,
+                Make = "Honda",
+                Model = "Civic"
+            };
         }
     }
 }
