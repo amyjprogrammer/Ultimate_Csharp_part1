@@ -29,6 +29,9 @@ namespace Arrays_Strings
             Console.WriteLine(flags[2]);
 
             var names = new string[3] { "Jack", "John", "Mary" };
+            
         }
+
+        
     }
 }

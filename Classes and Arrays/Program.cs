@@ -22,5 +22,25 @@ namespace Classes_and_Arrays
             var result = calculator.Add(1, 2);
             Console.WriteLine(result);
         }
+        
+        public void CookieTests()
+        {
+            Cookie cookie = new Cookie();
+            cookie.Name = "Snickerdoodle";
+            cookie.HasNuts = false;
+
+            var anotherCookie = new Cookie();
+            anotherCookie.Name = "Chocalate Chip";
+            cookie.HasNuts = false;
+
+            var secondCookie = new Cookie();
+            secondCookie.GramsOfFlour = 1.3;
+        }
+
+        public void VehicleTests()
+        {
+            var car = new Vehicle();
+            car.TypeOfVehicle = VehicleType.Car;
+        }
     }
 }
