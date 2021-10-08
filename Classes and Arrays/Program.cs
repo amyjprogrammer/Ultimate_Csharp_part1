@@ -21,6 +21,8 @@ namespace Classes_and_Arrays
             Calculator calculator = new Calculator();
             var result = calculator.Add(1, 2);
             Console.WriteLine(result);
+
+            
         }
         
         public void CookieTests()
@@ -51,5 +53,7 @@ namespace Classes_and_Arrays
                 Model = "Civic"
             };
         }
+
+        
     }
 }

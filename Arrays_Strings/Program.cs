@@ -29,9 +29,42 @@ namespace Arrays_Strings
             Console.WriteLine(flags[2]);
 
             var names = new string[3] { "Jack", "John", "Mary" };
-            
+
+            var nums = new int[3] { 1, 2, 3 };
+            string list = string.Join(", ", nums);
+            Console.WriteLine(list);
+
+            //escape characters
+            // \n - new line
+            // \t - tab
+            // \\ backslash
+            // \' single quotation mark
+            // \" Double quotation mark
+
+            //verbatim strings
+            string path = "c:\\projects\\project1\\folder1"; //would show projects\project1\folder1
+            string path1 = @"c:\projects\project1\folder1"; //same as above when printed
+
+            string firstName = "Amy"; //or var firstName = "Amy";
+            var lastName = "Jones";
+
+            var fullName = firstName + " " + lastName;
+            var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
+            var nameString = new string[3] { "John", "Jack", "Mary" };
+            var formattedNames = string.Join(", ", nameString);
+            Console.WriteLine(formattedNames); // shows John, Jack, Mary
+
+            var text = "Hi John\nLook into the following paths\nc:\\folder\\folder1\\projects\n\\folder3";
+            Console.WriteLine(text);
+
+            //use Verbatim
+            var text1 = @"Hi John
+Look into the following paths
+c:\folder1\folder2
+c:\folder3\folder4";
+            Console.WriteLine(text1);
         }
 
-        
+
     }
 }
