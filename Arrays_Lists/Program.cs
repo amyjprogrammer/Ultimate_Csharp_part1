@@ -73,7 +73,7 @@ namespace Arrays_Lists
              foreach (var num in number1)
                  Console.WriteLine(num);//only removed the first one*/
 
-            for(var i = 0; i < number1.Count; i++)
+            for (var i = 0; i < number1.Count; i++)
             {
                 if (number1[i] == 1)
                 {
@@ -81,20 +81,108 @@ namespace Arrays_Lists
                 }
             }
             //can't modify list with foreach- will cause error
-           /* foreach (var num in number1)
-            {
-                if (num == 1)
-                {
-                    number1.Remove(num);
-                }
-            }*/
+            /* foreach (var num in number1)
+             {
+                 if (num == 1)
+                 {
+                     number1.Remove(num);
+                 }
+             }*/
             foreach (var num in number1)
                 Console.WriteLine(num);
 
             number1.Clear();
             Console.WriteLine("Count: " + number1.Count);
 
+            var nameList = new List<string>();
+            bool enterName = true;
+            while (enterName)
+            {
+                Console.Write("Please enter a name: ");
+                var userInput = Console.ReadLine();
 
+                if (userInput.Length < 1)
+                {
+                    if (nameList.Count == 0)
+                    {
+                        Console.WriteLine("Nothing");
+                    }
+                    else if (nameList.Count == 1)
+                    {
+                        Console.WriteLine($"{nameList[0]} likes your post.");
+                    }
+                    else if (nameList.Count == 2)
+                    {
+                        Console.WriteLine($"{nameList[0]}, {nameList[1]} like your post.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{nameList[0]}, {nameList[1]} and {nameList.Count - 2} others like your post.");
+                    }
+                    enterName = false;
+                }
+                else
+                {
+                    nameList.Add(userInput);
+                }
+
+            }
+
+            Console.Write("Please enter your name: ");
+            var userIn = Console.ReadLine();
+            var array = new[] { userIn };
+            Array.Reverse(array);
+            var newString = array;
+            Console.WriteLine(newString);
+
+            var numFive = new List<int>();//asking user for five numbers..make sure they don't duplicate and sort the five numbers
+            while (numFive.Count < 5)
+            {
+
+                Console.Write("Enter numbers: ");
+                var userNum = Convert.ToInt32(Console.ReadLine());
+
+                if (numFive.Contains(userNum))
+                {
+                    Console.Write("Enter a new number: ");
+                    continue;
+                }
+                numFive.Add(userNum);
+                numFive.Sort();
+                foreach (var n in numFive)
+                {
+                    Console.WriteLine(n);
+                }
+
+            }
+
+
+            var numberList = new List<int>();
+
+            while (true)
+            {
+                Console.Write("Enter a number (or 'Quit' to exit): ");
+                var input = Console.ReadLine();
+
+                if (input.ToLower() == "quit")
+                    break;
+
+                numberList.Add(Convert.ToInt32(input));
+            }
+
+            var uniques = new List<int>();
+            foreach (var number in numberList)
+            {
+                if (!uniques.Contains(number))
+                    uniques.Add(number);
+            }
+
+            Console.WriteLine("Unique numbers:");
+            foreach (var number in uniques)
+                Console.WriteLine(number);
         }
+
+
     }
 }
+
