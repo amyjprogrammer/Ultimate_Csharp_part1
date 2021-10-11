@@ -73,6 +73,20 @@ namespace Working_With_Text
                 .Append('#', 10);//chaining them together
 
             Console.WriteLine(builderOne);
-        }    
+
+            Console.WriteLine("Enter numbers with a hyphen in between: ");//checking for consecutive
+            var userNums = Console.ReadLine();
+            var list = userNums.Split('-');
+
+            var first = Convert.ToInt32(list[0]);
+            var second = Convert.ToInt32(list[1]);
+
+            if ((first - second) == 1 || (second - first) == 1)
+                Console.WriteLine("Consecutive");
+            else
+                Console.WriteLine("Not Consecutive");
+
+
+        }
     }
 }
