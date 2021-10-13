@@ -1,0 +1,54 @@
+Breakpoints
+	-f9 - adds a breakpoint and removes it
+	-can add a breakpoint while debugging
+
+Debug or w/out
+	-just f5 run in debug mode
+	-ctrl + f5 - run w /out debug
+
+Step Over and Step Into- Contine to next breakpoint
+	-shortcut for step over is f10
+	-step into f11
+	-f5 will take you to the next breakpoint
+
+Watch Window
+	- while debugging - use debug - windows - watch
+	- in watch window can enter the names of the variables you want to watch instead of hovering over it
+
+Breaking out of Debug
+	- Shift + f5
+
+Break out of method while debugging
+	- shift + f11
+
+Removing Comments
+	- if added with Ctrl+K and Ctrl + C use Ctrl+K Ctrl+U
+	- if added with Shift + Ctrl + / use the same code again
+
+Disable all breakpoints
+	- ctrl + shift + f9
+
+Restart Debug
+	- ctrl + Shift + f5
+
+Remove Side Effects
+	- add a buffer list instead of going through the original
+
+Adding the throw an exception
+	- allows you to have more meaningful ways to solve the issue
+	- the second block also makes sure the count number provided makes sense
+	if (count > list.Count || count <= 0)
+		throw new ArgumentOutOfRangeException("count", "Count cannot be greater than number.")
+	- if list is null
+		if (list == null)
+			throw new ArugmentNullException("list")
+
+Lost while debugging
+	- use debug- windows - call stack
+	- call stack will show where you went through the program
+
+Instead of Watch
+	- use Auto
+		- found under debug- windows - auto
+	- automatically brings in the variables
+	- can also use Local (only looks at variables in the method while auto looks at all)
